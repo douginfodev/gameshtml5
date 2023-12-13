@@ -1,0 +1,79 @@
+body{
+ font-size:30px;
+ color:black;
+ background-color: #efefF0;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 800px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+}
+
+#velha{
+    margin:0 auto;
+    width: 606px;
+    height: 606px;
+}
+
+
+#topo{
+    background-image: url("../img/toponovo.png");
+    width: 606px;
+    height: 117px;
+}
+
+#corpo{
+    /*background-image: url("../img/topo.png");*/
+    width: 606px;
+    height: 356px;
+}
+
+
+#latesq{
+    float:left;
+    background-image: url("../img/latesq.png");
+    width: 98px;
+    height: 356px;
+}
+
+#centro{
+    float:left;
+    background-image: url("../img/centro.png");
+    width: 406px;
+    height: 351px;
+}
+
+#latdir{
+    float:left;
+    background-image: url("../img/latdir.png");
+    width: 98px;
+    height: 356px;
+}
+
+#dv1,#dv2,#dv3,#dv4,#dv5,#dv6,#dv7,#dv8,#dv9{    
+    width: 91px;
+    height: 91px;
+    background-color: white;
+    float:left;
+    font-size: 90px;
+    color: blue;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 27px;
+    margin-top: 12px
+}
+
+#dv1:hover,#dv2:hover{
+   background-color: yellow;
+}
+
+#rodape{
+    background-image: url("../img/rodape.png");
+    width: 606px;
+    height: 117px;
+}
