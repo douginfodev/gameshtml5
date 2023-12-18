@@ -1,0 +1,81 @@
+body{
+ font-size:30px;
+ color:black;
+ background-color: #efefF0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+}
+
+header{
+    width: 600px;
+    height: 175px;
+}
+
+.brand{
+    width: inherit;
+    height: 115px; 
+}
+
+nav{
+    display: flex;
+    width: inherit;
+    height: 60px; 
+    border: 1px solid white;
+}
+
+.menu-time,
+.menu-score,
+.menu-lives{
+    display: flex;
+    width: 33%;
+    height: 60px;
+    padding: 5px;
+    border: 1px solid white;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+}
+
+
+main{
+    width: 606px;
+    height: 600px;
+    border: 1px solid white;
+}
+
+
+#centro{
+    width: 606px;
+    height: 606px;
+}
+
+#dv1,#dv2,#dv3,#dv4,#dv5,#dv6,#dv7,#dv8,#dv9{    
+    width: 32%;
+    height: 32%;
+    background-color: white;
+    float:left;
+    cursor: pointer;
+    margin: 2px;
+    border: 1px solid white;
+
+    border-radius: 10px;
+}
+
+#dv1:hover,#dv2:hover{
+   background-color: yellow;
+}
+
+footer{
+    background-image: url("../img/rodape.png");
+    width: 606px;
+    height: 117px;
+}
