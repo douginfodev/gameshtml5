@@ -16,12 +16,13 @@ body {
     width: 100%;
     height: auto;
     align-items: center;
-    justify-content: center;
+    justify-content: center;    
 }
 
 header {
     width: 600px;
     height: 175px;
+    border: 10px; 
 }
 
 .brand {
@@ -33,7 +34,7 @@ nav {
     display: flex;
     width: inherit;
     height: 60px;
-    border: 1px solid white;
+    background-image: url('../img/bck-buttons.png');
 }
 
 #menu-time,
@@ -43,10 +44,9 @@ nav {
     width: 33%;
     height: 60px;
     padding: 5px;
-    border: 1px solid white;
+    margin: 1px;
     justify-content: center;
     align-items: center;
-
     border-radius: 10px;
 }
 
@@ -69,7 +69,7 @@ nav {
 main {
     width: 606px;
     height: 610px;
-    border: 1px solid white;
+    border-radius: 10px;
 }
 
 
@@ -97,18 +97,20 @@ main {
     cursor: pointer;
     margin: 2px;
     border-radius: 10px;
-    /* background-image: url('../img/ralphinativo.png'); */
-
 }
 
 #corpo {
-    /*background-image: url("../img/topo.png");*/
     width: 606px;
     height: 356px;
 }
 
 footer {
-    background-image: url("../img/rodape.png");
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url("../img/bck-black.png");
     width: 606px;
     height: 117px;
+    border-radius: 10px;
+    border: 2px solid #1ce09c;
 }
