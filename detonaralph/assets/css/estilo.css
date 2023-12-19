@@ -1,44 +1,44 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
- font-size:30px;
- background-image: url('../img/bck-layout.png');
- background-color: #efefF0;
+
+body {
+    font-size: 30px;
+    background-image: url('../img/bck-layout.png');
+    font-weight: 700;
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: auto;
     align-items: center;
     justify-content: center;
-    border: 2px solid white;
 }
 
-header{
+header {
     width: 600px;
     height: 175px;
 }
 
-.brand{
+.brand {
     width: inherit;
-    height: 115px; 
+    height: 115px;
 }
 
-nav{
+nav {
     display: flex;
     width: inherit;
-    height: 60px; 
+    height: 60px;
     border: 1px solid white;
 }
 
-.menu-time,
-.menu-score,
-.menu-lives{
+#menu-time,
+#menu-score,
+#menu-lives {
     display: flex;
     width: 33%;
     height: 60px;
@@ -50,25 +50,48 @@ nav{
     border-radius: 10px;
 }
 
+#menu-time {
+    color: yellow;
+    background-image: url('../img/menu-time.png');
+}
 
-main{
+#menu-score {
+    color: lightgreen;
+    background-image: url('../img/menu-score.png');
+}
+
+#menu-lives {
+    color: white;
+    background-image: url('../img/menu-player.png');
+}
+
+
+main {
     width: 606px;
-    height: 600px;
+    height: 610px;
     border: 1px solid white;
 }
 
 
-#centro{
+#centro {
     display: flex;
     flex-wrap: wrap;
-    margin:0 auto;
+    margin: 0 auto;
     width: 606px;
     height: 606px;
     justify-content: space-around;
     background-image: url('../img/bck-buttons.png');
 }
 
-#dv0,#dv2,#dv3,#dv4,#dv5,#dv6,#dv7,#dv8,#dv1{    
+#dv0,
+#dv2,
+#dv3,
+#dv4,
+#dv5,
+#dv6,
+#dv7,
+#dv8,
+#dv1 {
     width: 32%;
     height: 32%;
     cursor: pointer;
@@ -78,13 +101,13 @@ main{
 
 }
 
-#corpo{
+#corpo {
     /*background-image: url("../img/topo.png");*/
     width: 606px;
     height: 356px;
 }
 
-footer{
+footer {
     background-image: url("../img/rodape.png");
     width: 606px;
     height: 117px;

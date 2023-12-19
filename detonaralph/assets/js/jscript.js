@@ -20,16 +20,17 @@ tabuleirodv[7] = document.getElementById('dv7');
 tabuleirodv[8] = document.getElementById('dv8');
 
 // UI 
-let timeUI  = document.getElementById('menu-time');
+let timeUI = document.getElementById('menu-time');
 let scoreUI = document.getElementById('menu-score');
-let liveUI  = document.getElementById('menu-live');
+let liveUI = document.getElementById('menu-live');
 
 // Start
 window.onload = init();
 
 function init() {
-    tabuleirodv[0].style.backgroundImage = "url("+imgRalphInativo+")";
-    
+    tabuleirodv[0].style.backgroundImage = "url(" + imgRalphInativo + ")";
+    timeUI.innerHTML = '30';
+
     setInterval(function () {
         randomRalph(0, 8);
     }
@@ -48,16 +49,16 @@ function clickDetona(posicaoatual) {
     if (posicaoAtual === number) {
         clicked = true;
         placar(clicked);
-        tabuleirodv[number].style.backgroundImage = "url("+imgRalphInativo+")";
+        tabuleirodv[number].style.backgroundImage = "url(" + imgRalphInativo + ")";
     }
 };
 
 function changeImage(indice) {
-   tabuleirodv[indice].style.backgroundImage = "url("+imgRalph+")";
+    tabuleirodv[indice].style.backgroundImage = "url(" + imgRalph + ")";
 
-   setTimeout(function(){
-    tabuleirodv[number].style.backgroundImage = "url("+imgRalphInativo+")"
-   },700);
+    setTimeout(function () {
+        tabuleirodv[number].style.backgroundImage = "url(" + imgRalphInativo + ")"
+    }, 700);
 };
 
 // CONTADOR DO SCORE
@@ -68,19 +69,26 @@ function placar(check) {
     }
 };
 
-// CONTADOR DO SCORE
+// CONTADOR DO LIVES
 function lives() {
-    if (check) {
-        live -= 1;
+    live -= 1;
 
-        if (live >= 0)
-          time.innerHTML = live
-        else
-          gameover();
-    }
+    if (live >= 0)
+        liveUI.innerHTML = live
+    else
+        gameover();
 };
 
-function gameover(){
+function countTimer() {
+    time -= 1;
+
+    if (live >= 0)
+        time.innerHTML = time;
+    else
+        lives();
+};
+
+function gameover() {
     console.log('Fim do jogo');
 }
 
@@ -88,7 +96,7 @@ function playSound(audioName) {
     let audio = new Audio(`./assets/audios/${audioName}.m4a`);
     audio.volume = 0.2;
     audio.play();
-  }
+}
 
 function realizarJogada(posicao) {
     tabuleirodv[posicao].innerHTML = playerTurno(playerAtual);
