@@ -1,6 +1,5 @@
 //DOM
-let tabuleirodv1 = document.getElementById('dv0');//Selecionando dv 
-let tabuleirodv = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+let tabuleirodv = [];
 tabuleirodv[0] = document.getElementById('dv0');
 tabuleirodv[1] = document.getElementById('dv1');
 tabuleirodv[2] = document.getElementById('dv2');
@@ -11,37 +10,40 @@ tabuleirodv[6] = document.getElementById('dv6');
 tabuleirodv[7] = document.getElementById('dv7');
 tabuleirodv[8] = document.getElementById('dv8');
 
-let ab = document.getElementById('ralph');
+let scoreUI = document.getElementById('menu-score');
+let number = 0;
+let clicked = false;
+let score = 0;
 
-
-let dvVazia = [
-    [9, 9, 9],
-    [9, 9, 9],
-    [9, 9, 9]
-];
 
 window.onload = init();
 
-function init(){
-setInterval(function() {
-        randomRalph(0,8);
-       }
-    , 1000);
-  };
+function init() {
+    setInterval(function () {
+        randomRalph(0, 8);
+    }
+        , 3000);
+};
 
-function randomRalph(min,max) {
-    let number = Math.floor(Math.random() * (max - min + 1)) + min;
-    ab.src = '../img/ralphativo.png';
-  console.log(number);
+function randomRalph(min, max) {
+    number = Math.floor(Math.random() * (max - min + 1)) + min;
+    clicked = false;
 }
 
-function verificadvVazia(posicaoatual, gridelinha, gridecoluna) {
+function clickDetona(posicaoatual) {
     let posicaoAtual = posicaoatual;
 
-    if (dvVazia[gridelinha][gridecoluna] === 9) {
-        realizarJogada(posicaoAtual);
-        dvVazia[gridelinha][gridecoluna] = 0;
-        alert(gridelinha + '' + gridecoluna);
+    if (posicaoAtual === number) {
+        clicked = true;
+        placar(clicked);
+    }
+};
+
+// CONTADOR DO SCORE
+function placar(check) {
+    if (check) {
+        score += 1;
+        scoreUI.innerHTML = score;
     }
 };
 
@@ -55,41 +57,3 @@ function realizarJogada(posicao) {
     else
         playerAtual = 1;
 };
-
-function checarVitoria() {
-    let vit = false;
-
-
-    if (dvVazia[0][0] && dvVazia[0][1] && dvVazia[0][2] === 1) {
-        tabuleirodv[1].style.backgroundColor = 'lime';
-        tabuleirodv[2].style.backgroundColor = 'lime';
-        tabuleirodv[3].style.backgroundColor = 'lime';
-        vit = true;
-        window.setTimeout(reiniciar(), 5000);
-    } else {
-        if (dvVazia[1][0] && dvVazia[1][1] && dvVazia[1][2] === 1) {
-            alert('JOGADOR x VENCEU');
-            vit = true;
-        }
-
-
-    }
-
-
-};
-
-
-function reiniciar() {
-    alert('JOGADOR X VENCEU');
-    window.location.reload();
-}
-
-function subtrairNumeros(n1, n2) {
-    let res = (n1 - n2);
-    document.writeln('resultado =' + res);
-}
-
-function subtrairNumeros1() {
-    let res = (n1 - n2);
-    document.writeln('resultado =' + res);
-}
