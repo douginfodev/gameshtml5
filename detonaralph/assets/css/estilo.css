@@ -68,16 +68,13 @@ main{
     background-image: url('../img/bck-buttons.png');
 }
 
-#dv1,#dv2,#dv3,#dv4,#dv5,#dv6,#dv7,#dv8,#dv9{    
-    width: 30%;
-    height: 30%;
-    /* float:left; */
+#dv0,#dv2,#dv3,#dv4,#dv5,#dv6,#dv7,#dv8,#dv1{    
+    width: 32%;
+    height: 32%;
     cursor: pointer;
-    margin: 4px;
-    /* border: 1px solid white; */
-
+    margin: 2px;
     border-radius: 10px;
-    background-image: url('../img/ralphinativo.png');
+    /* background-image: url('../img/ralphinativo.png'); */
 
 }
 
@@ -86,21 +83,6 @@ main{
     width: 606px;
     height: 356px;
 }
-
-#dv1,#dv2,#dv3,#dv4,#dv5,#dv6,#dv7,#dv8,#dv9{    
-    width: 32%;
-    height: 32%;
-    float:left;
-    cursor: pointer;
-    margin: 2px;
-
-    border-radius: 10px;
-}
-
-#dv1:hover,#dv2:hover{
-   background-color: yellow;
-}
-
 
 footer{
     background-image: url("../img/rodape.png");
