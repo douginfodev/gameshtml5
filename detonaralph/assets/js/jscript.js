@@ -1,52 +1,53 @@
 //DOM
-let tabuleiroCasa1 = document.getElementById('casa0');//Selecionando casa 
-let tabuleiroCasa = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-tabuleiroCasa[0] = document.getElementById('casa0');
-tabuleiroCasa[1] = document.getElementById('casa1');
-tabuleiroCasa[2] = document.getElementById('casa2');
-tabuleiroCasa[3] = document.getElementById('casa3');
-tabuleiroCasa[4] = document.getElementById('casa4');
-tabuleiroCasa[5] = document.getElementById('casa5');
-tabuleiroCasa[6] = document.getElementById('casa6');
-tabuleiroCasa[7] = document.getElementById('casa7');
-tabuleiroCasa[8] = document.getElementById('casa8');
+let tabuleirodv1 = document.getElementById('dv0');//Selecionando dv 
+let tabuleirodv = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+tabuleirodv[0] = document.getElementById('dv0');
+tabuleirodv[1] = document.getElementById('dv1');
+tabuleirodv[2] = document.getElementById('dv2');
+tabuleirodv[3] = document.getElementById('dv3');
+tabuleirodv[4] = document.getElementById('dv4');
+tabuleirodv[5] = document.getElementById('dv5');
+tabuleirodv[6] = document.getElementById('dv6');
+tabuleirodv[7] = document.getElementById('dv7');
+tabuleirodv[8] = document.getElementById('dv8');
+
+let ab = document.getElementById('ralph');
 
 
-let casaVazia = [
+let dvVazia = [
     [9, 9, 9],
     [9, 9, 9],
     [9, 9, 9]
 ];
 
-//Player
-let playerAtual = 1; //Jogador Atual
-let colorPlayer = 'blue';
+window.onload = init();
 
-function playerTurno(jogador) {
-    let playerSimbolo = 'O';
-    colorPlayer = 'red';
+function init(){
+setInterval(function() {
+        randomRalph(0,8);
+       }
+    , 1000);
+  };
 
-    if (jogador === 1) {
-        playerSimbolo = 'X';
-        colorPlayer = 'blue';
-    }
-
-    return playerSimbolo;
+function randomRalph(min,max) {
+    let number = Math.floor(Math.random() * (max - min + 1)) + min;
+    ab.src = '../img/ralphativo.png';
+  console.log(number);
 }
 
-function verificaCasaVazia(posicaoatual,gridelinha,gridecoluna) {
+function verificadvVazia(posicaoatual, gridelinha, gridecoluna) {
     let posicaoAtual = posicaoatual;
-  
-            if (casaVazia[gridelinha][gridecoluna] === 9) {                
-                realizarJogada(posicaoAtual);
-                casaVazia[gridelinha][gridecoluna] = 0;
-                alert(gridelinha+''+gridecoluna);
-            }
-    };
+
+    if (dvVazia[gridelinha][gridecoluna] === 9) {
+        realizarJogada(posicaoAtual);
+        dvVazia[gridelinha][gridecoluna] = 0;
+        alert(gridelinha + '' + gridecoluna);
+    }
+};
 
 function realizarJogada(posicao) {
-    tabuleiroCasa[posicao].innerHTML = playerTurno(playerAtual);
-    tabuleiroCasa[posicao].style.color = colorPlayer;
+    tabuleirodv[posicao].innerHTML = playerTurno(playerAtual);
+    tabuleirodv[posicao].style.color = colorPlayer;
 
     //Troca o turno / player
     if (playerAtual === 1)
@@ -59,14 +60,14 @@ function checarVitoria() {
     let vit = false;
 
 
-    if (casaVazia[0][0] && casaVazia[0][1] && casaVazia[0][2] === 1) {
-        tabuleiroCasa[1].style.backgroundColor = 'lime';
-        tabuleiroCasa[2].style.backgroundColor = 'lime';
-        tabuleiroCasa[3].style.backgroundColor = 'lime';
+    if (dvVazia[0][0] && dvVazia[0][1] && dvVazia[0][2] === 1) {
+        tabuleirodv[1].style.backgroundColor = 'lime';
+        tabuleirodv[2].style.backgroundColor = 'lime';
+        tabuleirodv[3].style.backgroundColor = 'lime';
         vit = true;
         window.setTimeout(reiniciar(), 5000);
     } else {
-        if (casaVazia[1][0] && casaVazia[1][1] && casaVazia[1][2] === 1) {
+        if (dvVazia[1][0] && dvVazia[1][1] && dvVazia[1][2] === 1) {
             alert('JOGADOR x VENCEU');
             vit = true;
         }
