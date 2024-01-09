@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 30px;
+    background-image: url('../img/fundo.png');
+    font-weight: 700;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;    
+}
+
+header {
+    display: flex;
+    width: 600px;
+    height: 175px;
+    border: 10px; 
+}
+
+.brand {
+    width: inherit;
+    height: 100px;
+}
+
+.volume {
+    width: 250px;
+    height: 100px;
+    background-image: url('../img/bck-buttons.png');
+}
+
+.teclas {
+    width: 100px;
+    height: 100px;
+    background-image: url('../img/bck-buttons.png');
+}
+
+main {
+    width: 606px;
+    height: 610px;
+    border-radius: 10px;
+}
+
+
+#centro {
+    display: flex;
+    margin: 0 auto;
+    width: 420px;
+    height: 250px;
+    justify-content: space-around;
+    background-image: url('../img/bck-buttons.png');
+}
+
+#keyc,
+#keyd,
+#keye,
+#keyf,
+#keyg,
+#keya,
+#keyb
+   {
+    width: 60px;
+    height: 230px;
+    cursor: pointer;
+    border: solid 2px black;
+    border-radius: 10px;
+    background-image: url('../img/bck-buttons.png');
+}
+
+#corpo {
+    width: 606px;
+    height: 356px;
+}
+
+footer {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url("../img/bck-black.png");
+    width: 606px;
+    height: 117px;
+    border-radius: 10px;
+    border: 2px solid #1ce09c;
+}
