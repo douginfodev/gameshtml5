@@ -1,23 +1,18 @@
 // Variables
 let number = 0;
 let clicked = false;
-let score = 0;
-let live = 3;
 let timer = 2000;
-let imgRalph = 'assets/img/ralphativo.png';
-let imgRalphInativo = 'assets/img/ralphinativo.png';
 
 //DOM
-let tabuleirodv = [];
-tabuleirodv[0] = document.getElementById('dv0');
-tabuleirodv[1] = document.getElementById('dv1');
-tabuleirodv[2] = document.getElementById('dv2');
-tabuleirodv[3] = document.getElementById('dv3');
-tabuleirodv[4] = document.getElementById('dv4');
-tabuleirodv[5] = document.getElementById('dv5');
-tabuleirodv[6] = document.getElementById('dv6');
-tabuleirodv[7] = document.getElementById('dv7');
-tabuleirodv[8] = document.getElementById('dv8');
+let keyboard = [];
+keyboard[0] = document.getElementById('keyc');
+keyboard[1] = document.getElementById('keyd');
+keyboard[2] = document.getElementById('keye');
+keyboard[3] = document.getElementById('keyf');
+keyboard[4] = document.getElementById('keyg');
+keyboard[5] = document.getElementById('keya');
+keyboard[6] = document.getElementById('keyb');
+
 
 // UI 
 let timeUI = document.getElementById('menu-time');
@@ -28,55 +23,44 @@ let liveUI = document.getElementById('menu-live');
 window.onload = init();
 
 function init() {
-    tabuleirodv[0].style.backgroundImage = "url(" + imgRalphInativo + ")";
-    timeUI.innerHTML = '30';
 
-    setInterval(function () {
-        randomRalph(0, 8);
-    }
-        , timer);
 };
 
-function randomRalph(min, max) {
-    number = Math.floor(Math.random() * (max - min + 1)) + min;
-    clicked = false;
-    changeImage(number);
-}
 
-function clickDetona(posicaoatual) {
-    let posicaoAtual = posicaoatual;
+function clickKey(notamusical) {
+    let notaAtual = notamusical;
 
-    if (posicaoAtual === number) {
-        clicked = true;
-        placar(clicked);
-        tabuleirodv[number].style.backgroundImage = "url(" + imgRalphInativo + ")";
+    switch (notaAtual) {
+        case "C":
+            playSound('c');
+            break;
+        case "D":
+            playSound('d');
+            break;
+        case "E":
+            playSound('e');
+            break;
+        case "F":
+            playSound('f');
+            break;
+        case "G":
+            playSound('g');
+            break;
+        case "A":
+            playSound('a');
+            break;
+        case "B":
+            playSound('b');
+            break;
     }
 };
 
 function changeImage(indice) {
-    tabuleirodv[indice].style.backgroundImage = "url(" + imgRalph + ")";
+    keyboard[indice].style.backgroundImage = "url(" + imgRalph + ")";
 
     setTimeout(function () {
-        tabuleirodv[number].style.backgroundImage = "url(" + imgRalphInativo + ")"
+        keyboard[number].style.backgroundImage = "url(" + imgRalphInativo + ")"
     }, 700);
-};
-
-// CONTADOR DO SCORE
-function placar(check) {
-    if (check) {
-        score += 1;
-        scoreUI.innerHTML = score;
-    }
-};
-
-// CONTADOR DO LIVES
-function lives() {
-    live -= 1;
-
-    if (live >= 0)
-        liveUI.innerHTML = live
-    else
-        gameover();
 };
 
 function countTimer() {
@@ -88,23 +72,8 @@ function countTimer() {
         lives();
 };
 
-function gameover() {
-    console.log('Fim do jogo');
-}
-
 function playSound(audioName) {
-    let audio = new Audio(`./assets/audios/${audioName}.m4a`);
+    let audio = new Audio(`./assets/tunes/${audioName}.wav`);
     audio.volume = 0.2;
     audio.play();
 }
-
-function realizarJogada(posicao) {
-    tabuleirodv[posicao].innerHTML = playerTurno(playerAtual);
-    tabuleirodv[posicao].style.color = colorPlayer;
-
-    //Troca o turno / player
-    if (playerAtual === 1)
-        playerAtual = 0
-    else
-        playerAtual = 1;
-};
