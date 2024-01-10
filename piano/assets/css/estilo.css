@@ -51,12 +51,13 @@ main {
 
 
 #centro {
-    display: flex;
+    display: relative; 
     margin: 0 auto;
-    width: 420px;
+    width: 450px;
     height: 250px;
-    justify-content: space-around;
-    background-image: url('../img/bck-buttons.png');
+    padding-left: 15px;
+    border-radius: 0 0 10px 10px;
+    background-image: url('../img/bck-black.png');
 }
 
 #keyc,
@@ -67,13 +68,60 @@ main {
 #keya,
 #keyb
    {
+    position: relative;
+    float: left;
     width: 60px;
     height: 230px;
     cursor: pointer;
-    border: solid 2px black;
-    border-radius: 10px;
+    border: solid 1px black;
+    border-radius: 0 0 10px 10px;
     background-image: url('../img/bck-buttons.png');
 }
+
+.maiorkey{
+    width: inherit;
+    position: relative;
+    /* float: left; */
+}
+
+#maiorkeyc,
+#maiorkeyd,
+#maiorkeyf,
+#maiorkeyg,
+#maiorkeya
+{
+    position: absolute;
+    top: 0;
+    left: 40px;
+    width: 40px;
+    height: 160px;
+    margin: 0;
+    cursor: pointer;
+    /* border: solid 2px black; */
+    border-radius: 0 0 10px 10px;
+    background-image: url('../img/bck-black.png');
+}
+
+#maiorkeyd
+{
+  left: 100px;
+}
+
+#maiorkeyf
+{
+  left: 220px;
+}
+
+#maiorkeyg
+{
+  left: 280px;
+}
+
+#maiorkeya
+{
+  left: 340px;
+}
+
 
 #corpo {
     width: 606px;
