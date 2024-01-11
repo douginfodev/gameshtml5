@@ -2,6 +2,7 @@
 let number = 0;
 let clicked = false;
 let timer = 2000;
+let highSound = 0.5;
 
 //DOM
 let keyboard = [];
@@ -13,11 +14,6 @@ keyboard[4] = document.getElementById('keyg');
 keyboard[5] = document.getElementById('keya');
 keyboard[6] = document.getElementById('keyb');
 
-
-// UI 
-let timeUI = document.getElementById('menu-time');
-let scoreUI = document.getElementById('menu-score');
-let liveUI = document.getElementById('menu-live');
 
 // Start
 window.onload = init();
@@ -34,8 +30,15 @@ function clickKey(notamusical) {
         case "C":
             playSound('c');
             break;
+
+        case "MC":
+            playSound('mc');
+            break;
         case "D":
             playSound('d');
+            break;
+        case "MD":
+            playSound('md');
             break;
         case "E":
             playSound('e');
@@ -43,11 +46,20 @@ function clickKey(notamusical) {
         case "F":
             playSound('f');
             break;
+        case "MF":
+            playSound('mf');
+            break;
         case "G":
             playSound('g');
             break;
+        case "MG":
+            playSound('mg');
+            break;
         case "A":
             playSound('a');
+            break;
+        case "MA":
+            playSound('ma');
             break;
         case "B":
             playSound('b');
@@ -74,6 +86,6 @@ function countTimer() {
 
 function playSound(audioName) {
     let audio = new Audio(`./assets/tunes/${audioName}.wav`);
-    audio.volume = 0.2;
+    audio.volume = highSound;
     audio.play();
 }
