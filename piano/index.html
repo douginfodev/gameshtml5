@@ -21,18 +21,22 @@
       </div>
 
       <div class="volume">
-        <h3>VOLUME</h3>
+        <input type="range" min="0" max="0.9" step="0.1" />
       </div>
 
       <div class="teclas">
-        <h3>TECLAS</h3>
+        <!-- Rounded switch -->
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
       </div>
     </header>
 
     <main>
       <div id="centro">
         <div id="keyc" onclick="clickKey('C')">
-        </div>        
+        </div>
 
         <div id="keyd" onclick="clickKey('D')">
         </div>
@@ -51,23 +55,23 @@
 
         <div id="keyb" onclick="clickKey('B')">
         </div>
-        
+
         <div class="maiorkey">
-          <div id="maiorkeyc" onclick="clickKey('MC')"> 
+          <div id="maiorkeyc" onclick="clickKey('MC')">
           </div>
 
-          <div id="maiorkeyd" onclick="clickKey('MD')"> 
-          </div> 
-
-          <div id="maiorkeyf" onclick="clickKey('MF')"> 
+          <div id="maiorkeyd" onclick="clickKey('MD')">
           </div>
 
-          <div id="maiorkeyg" onclick="clickKey('MG')"> 
-          </div> 
+          <div id="maiorkeyf" onclick="clickKey('MF')">
+          </div>
 
-          <div id="maiorkeya" onclick="clickKey('MA')"> 
-          </div>          
-        </div>    
+          <div id="maiorkeyg" onclick="clickKey('MG')">
+          </div>
+
+          <div id="maiorkeya" onclick="clickKey('MA')">
+          </div>
+        </div>
 
       </div>
     </main>
