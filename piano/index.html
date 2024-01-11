@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="assets/css/estilo.css">
-  <meta name="Description" content="Bootcamp IFood DIO.me - Projeto Piano Online">
+  <meta name="Description" content="Bootcamp IFood DIO.me - Projeto Piano Simulator">
   <meta name="author" content="Douglas Ramos - github.com/douginfodev">
   <meta name="robots" content="index,follow">
 </head>
@@ -22,7 +22,7 @@
 
       <div class="volume">
        <span>VOLUME</span>
-        <input type="range" min="0" max="0.9" step="0.1" />
+        <input type="range" id="range" min="0" max="0.9" step="0.1" onchange="changeVolume()" />
       </div>
 
       <div class="teclas">
@@ -38,40 +38,52 @@
     <main>
       <div id="centro">
         <div id="keyc" onclick="clickKey('C')">
+          <span class="notalabel">C</span>
         </div>
 
         <div id="keyd" onclick="clickKey('D')">
+          <span class="notalabel">D</span>
         </div>
 
         <div id="keye" onclick="clickKey('E')">
+          <span class="notalabel">E</span>
         </div>
 
         <div id="keyf" onclick="clickKey('F')">
+          <span class="notalabel">F</span>
         </div>
 
         <div id="keyg" onclick="clickKey('G')">
+          <span class="notalabel">G</span>
         </div>
 
         <div id="keya" onclick="clickKey('A')">
+          <span class="notalabel">A</span>
         </div>
 
         <div id="keyb" onclick="clickKey('B')">
+          <span class="notalabel">B</span>
         </div>
 
         <div class="maiorkey">
           <div id="maiorkeyc" onclick="clickKey('MC')">
+            <span class="maiorlabel">C#</span>
           </div>
 
           <div id="maiorkeyd" onclick="clickKey('MD')">
+            <span class="maiorlabel">D#</span>
           </div>
 
           <div id="maiorkeyf" onclick="clickKey('MF')">
+            <span class="maiorlabel">F#</span>
           </div>
 
           <div id="maiorkeyg" onclick="clickKey('MG')">
+            <span class="maiorlabel">G#</span>
           </div>
 
           <div id="maiorkeya" onclick="clickKey('MA')">
+            <span class="maiorlabel">A#</span>
           </div>
         </div>
 

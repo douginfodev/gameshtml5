@@ -14,12 +14,12 @@ keyboard[4] = document.getElementById('keyg');
 keyboard[5] = document.getElementById('keya');
 keyboard[6] = document.getElementById('keyb');
 
-
+let volumeCurrent = document.getElementById('range');
 // Start
 window.onload = init();
 
 function init() {
-
+    volumeCurrent.value = highSound;
 };
 
 
@@ -67,12 +67,9 @@ function clickKey(notamusical) {
     }
 };
 
-function changeImage(indice) {
-    keyboard[indice].style.backgroundImage = "url(" + imgRalph + ")";
-
-    setTimeout(function () {
-        keyboard[number].style.backgroundImage = "url(" + imgRalphInativo + ")"
-    }, 700);
+function changeVolume() {
+   let vol = volumeCurrent.value;
+   return vol;
 };
 
 function countTimer() {
@@ -86,6 +83,6 @@ function countTimer() {
 
 function playSound(audioName) {
     let audio = new Audio(`./assets/tunes/${audioName}.wav`);
-    audio.volume = highSound;
+    audio.volume = changeVolume();
     audio.play();
 }
