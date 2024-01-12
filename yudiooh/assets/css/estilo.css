@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 30px;
+    background-image: url('../img/fundo.png');
+    font-weight: 700;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;    
+}
+
+header {
+    width: 600px;
+    height: 175px;
+    border: 10px; 
+}
+
+.brand {
+    width: inherit;
+    height: 115px;
+}
+
+nav {
+    display: flex;
+    width: inherit;
+    height: 60px;
+    background-image: url('../img/bck-buttons.png');
+}
+
+#menu-time,
+#menu-score,
+#menu-lives {
+    display: flex;
+    width: 33%;
+    height: 60px;
+    padding: 5px;
+    margin: 1px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#menu-time {
+    color: yellow;
+    background-image: url('../img/menu-time.png');
+}
+
+#menu-score {
+    color: lightgreen;
+    background-image: url('../img/menu-score.png');
+}
+
+#menu-lives {
+    color: white;
+    background-image: url('../img/menu-player.png');
+}
+
+
+main {
+    width: 606px;
+    height: 610px;
+    border-radius: 10px;
+}
+
+
+#centro {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 606px;
+    height: 606px;
+    justify-content: space-around;
+    background-image: url('../img/bck-buttons.png');
+}
+
+#dv0,
+#dv2,
+#dv3,
+#dv4,
+#dv5,
+#dv6,
+#dv7,
+#dv8,
+#dv1 {
+    width: 32%;
+    height: 32%;
+    cursor: pointer;
+    margin: 2px;
+    border-radius: 10px;
+}
+
+#corpo {
+    width: 606px;
+    height: 356px;
+}
+
+footer {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url("../img/bck-black.png");
+    width: 606px;
+    height: 117px;
+    border-radius: 10px;
+    border: 2px solid #1ce09c;
+}
