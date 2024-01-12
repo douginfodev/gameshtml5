@@ -11,9 +11,11 @@ body {
 }
 
 .container {
+    margin:0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100%;
     height: auto;
 }
@@ -38,32 +40,50 @@ header {
 }
 
 main {
+    display: flex;
     width: 1240px;
     height: 610px;
     border-radius: 10px;
     border: 1px solid white;
 }
 
-
-#centro {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    width: 606px;
+aside{
+    width: 180px;
     height: 606px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+}
+
+.centro {
+    display: flex;
+    flex-direction: column;
+    width: 950px;
+    height: 606px;
+    justify-content: space-around;
+    background-image: url('../img/bck-buttons.png');
+}
+
+.centro-cards {
+    display: flex;
+    width: inherit;
+    height: 402px;
+    justify-content: space-around;
+    background-image: url('../img/bck-layout.png');
+}
+
+.centro-footer {
+    display: flex;
+    width: inherit;
+    height: 202px;
     justify-content: space-around;
     background-image: url('../img/bck-buttons.png');
 }
 
 #dv0,
 #dv2,
-#dv3,
-#dv4,
-#dv5,
-#dv6,
-#dv7,
-#dv8,
-#dv1 {
+#dv3
+{
     width: 32%;
     height: 32%;
     cursor: pointer;
@@ -71,18 +91,17 @@ main {
     border-radius: 10px;
 }
 
-#corpo {
-    width: 606px;
-    height: 356px;
-}
-
 footer {
     display:flex;
     justify-content: space-around;
     align-items: center;
     background-image: url("../img/bck-black.png");
-    width: 606px;
-    height: 117px;
+    width: 1240px;
+    height: 80px;
     border-radius: 10px;
     border: 2px solid #1ce09c;
+}
+
+footer img{
+    width: 50px;
 }
