@@ -52,6 +52,8 @@ aside{
     height: 606px;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     border: 1px solid white;
 }
 
@@ -80,16 +82,76 @@ aside{
     background-image: url('../img/bck-buttons.png');
 }
 
-#dv0,
-#dv2,
-#dv3
+#p1card1,
+#p1card2,
+#p1card3,
+#p1card4,
+#p1card5,
+#p2card1,
+#p2card2,
+#p2card3,
+#p2card4,
+#p2card5
 {
-    width: 32%;
-    height: 32%;
+    width: 90px;
+    height: 30%;
     cursor: pointer;
     margin: 2px;
     border-radius: 10px;
+    border: 2px solid white;
+    background-image: url('../icons/card-back.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
+
+#p1card1,
+#p1card2,
+#p1card3,
+#p1card4,
+#p1card5{
+    border-color: aqua;
+}
+
+#p2card1,
+#p2card2,
+#p2card3,
+#p2card4,
+#p2card5{
+    border-color: coral; 
+}
+
+.board{
+    display: flex;
+    width: 50%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+#board-card1,
+#board-card2
+{
+    width: 160px;
+    height: 60%;
+    cursor: pointer;
+    margin: 2px;
+    border-radius: 10px;
+    border: 2px solid white; 
+}
+
+.logo-center{
+    display: flex;
+    width: 160px;
+    height: 60%;
+    align-items: center;
+    margin: 5px;   
+}
+
+.logo-center img{
+    width: 100%;
+}
+
+
 
 footer {
     display:flex;
