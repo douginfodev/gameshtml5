@@ -13,63 +13,35 @@ body {
 .container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 100%;
     height: auto;
-    align-items: center;
-    justify-content: center;    
 }
 
 header {
-    width: 600px;
-    height: 175px;
-    border: 10px; 
+    display: flex;
+    width: 1240px;
+    height: 80px;
+    border: 1px solid white; 
 }
 
 .brand {
     width: inherit;
-    height: 115px;
+    height: 80px;
 }
 
-nav {
+.title {
     display: flex;
-    width: inherit;
-    height: 60px;
+    width: 880px;
+    height: 80px;
     background-image: url('../img/bck-buttons.png');
 }
 
-#menu-time,
-#menu-score,
-#menu-lives {
-    display: flex;
-    width: 33%;
-    height: 60px;
-    padding: 5px;
-    margin: 1px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-}
-
-#menu-time {
-    color: yellow;
-    background-image: url('../img/menu-time.png');
-}
-
-#menu-score {
-    color: lightgreen;
-    background-image: url('../img/menu-score.png');
-}
-
-#menu-lives {
-    color: white;
-    background-image: url('../img/menu-player.png');
-}
-
-
 main {
-    width: 606px;
+    width: 1240px;
     height: 610px;
     border-radius: 10px;
+    border: 1px solid white;
 }
 
 
