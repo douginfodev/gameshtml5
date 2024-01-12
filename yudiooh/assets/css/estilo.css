@@ -57,6 +57,14 @@ aside{
     border: 1px solid white;
 }
 
+.player1{
+    background-image: url('../rpg/fundop1.png');
+}
+
+.player2{
+    background-image: url('../rpg/fundop2.png');
+}
+
 .centro {
     display: flex;
     flex-direction: column;
@@ -78,8 +86,6 @@ aside{
     display: flex;
     width: inherit;
     height: 202px;
-    justify-content: space-around;
-    background-image: url('../img/bck-buttons.png');
 }
 
 #p1card1,
@@ -131,12 +137,15 @@ aside{
 #board-card1,
 #board-card2
 {
-    width: 160px;
-    height: 60%;
+    width: 210px;
+    height: 228px;
     cursor: pointer;
+    padding: 3px;
     margin: 2px;
     border-radius: 10px;
     border: 2px solid white; 
+    background-image: url('../icons/dragon.png');
+    background-position: center;
 }
 
 .logo-center{
@@ -149,6 +158,23 @@ aside{
 
 .logo-center img{
     width: 100%;
+}
+
+.centro-footer{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 220px;
+    background-image: url('../img/bck-layout.png');
+}   
+
+.card-info{
+    width: 48%;
+    height: 210px;
+    border: 2px solid #3d6c90;
+    padding: 10px;
+    border-radius: 10px 10px 10px 10px;
+    background-image: url('../../assets/img/bck-cards.png');
 }
 
 
@@ -166,4 +192,11 @@ footer {
 
 footer img{
     width: 50px;
+}
+
+.placarp1,
+.placarp2{
+    width: 100px;
+    height: inherit;
+    border: 1px solid white;
 }

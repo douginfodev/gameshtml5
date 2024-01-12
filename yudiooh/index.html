@@ -26,11 +26,11 @@
     </header>
 
     <main>
-      <aside>
-        <h5>Player 1</h5>  
+      <aside class="player1">
+        <h5>Player 1</h5>
         <div id="p1card1">
           <img src="" alt="">
-        </div> 
+        </div>
 
         <div id="p1card2">
           <img src="" alt="">
@@ -52,48 +52,58 @@
       <div class="centro">
         <div class="centro-cards">
           <div class="board">
-          <div id="board-card1" onclick="clickDetona(0)">
-          </div>
-  
-          <div class="logo-center">
-            <img src="assets/icons/millenium2.png" alt="">
-          </div>
-  
-          <div id="board-card2" onclick="clickDetona(2)" style="background-image: url('assets/img/ralphinativo.png');">
-          </div>
-        </div>
-        </div>
+            <div id="board-card1" onclick="clickDetona(0)">
+            </div>
 
-        <div class="centro-footer">
-          
-        </div>
-      </div>
+            <div class="logo-center">
+              <img src="assets/icons/millenium2.png" alt="">
+            </div>
 
-      <aside>
-        <h5>Player 2</h5>
-        <div id="p2card1">
-          <img src="" alt="">
+            <div id="board-card2" onclick="clickDetona(2)"
+              style="background-image: url('assets/img/ralphinativo.png');">
+            </div>
+          </div>
         </div> 
+          <div class="centro-footer">
+            <div class="card-info">
 
-        <div id="p2card2">
-          <img src="" alt="">
+            </div>
+
+            <div class="card-info">
+
+            </div>
+          </div>
         </div>
 
-        <div id="p2card3">
-          <img src="" alt="">
-        </div>
+        <aside class="player2">
+          <h5>Player 2</h5>
+          <div id="p2card1">
+            <img src="" alt="">
+          </div>
 
-        <div id="p2card4">
-          <img src="" alt="">
-        </div>
+          <div id="p2card2">
+            <img src="" alt="">
+          </div>
 
-        <div id="p2card5">
-          <img src="" alt="">
-        </div>
-      </aside>
+          <div id="p2card3">
+            <img src="" alt="">
+          </div>
+
+          <div id="p2card4">
+            <img src="" alt="">
+          </div>
+
+          <div id="p2card5">
+            <img src="" alt="">
+          </div>
+        </aside>
     </main>
 
     <footer>
+      <div class="placarp1">
+        <h3 id="p1win">WIN: 0</h3>
+        <h3 id="p1lose">LOSE: 0</h3>
+      </div>
       <div class="socialmedia-logo">
         <a href="https://www.instagram.com/profdomdev/" target="_blank">
           <img src="assets/img/instagram80x80.png" alt="Logotipo do Instagram" />
@@ -115,6 +125,10 @@
         <a href="https://github.com/douginfodev" target="_blank">
           <img src="assets/img/logogit.png" alt="Logo do repositorio GitHub" />
         </a>
+      </div>
+      <div class="placarp2">
+        <h3 id="p2win">WIN: 0</h3>
+        <h3 id="p2loose">LOSE: 0</h3>
       </div>
     </footer>
   </div>
