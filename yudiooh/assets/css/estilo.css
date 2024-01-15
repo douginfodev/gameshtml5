@@ -208,6 +208,7 @@ aside{
 .card-info-descricao-card img{
     width: 80%;
     height: auto;
+    cursor: pointer;
 }
 
 

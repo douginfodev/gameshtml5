@@ -7,17 +7,20 @@ let timer = 2000;
 let cardgreendown = 'assets/img/cardgreendown.png';
 let cardbluedown = 'assets/img/cardbluedown.png';
 
-let cardsName = ['','Dragon','Exodia','Magician'];
-let cardsAtributes = ['','Pedra','Tesoura','Papel'];
-let cardsImage = ['','dragon.png','exodia.png','magician.png']
+let cardsName = ['', 'Dragon', 'Exodia', 'Magician'];
+let cardsAtributes = ['', 'Pedra', 'Tesoura', 'Papel'];
+let cardsImage = ['', 'dragon.png', 'exodia.png', 'magician.png']
 
-//DOM
+//Player 1
 const cardBoardP1 = document.getElementById('cardp1');
-const cardBoardP1Title    = document.getElementById('namecardp1');
+const cardBoardP1Title = document.getElementById('namecardp1');
 const cardBoardP1Atribute = document.getElementById('atributosp1');
+const boardCardP1 = document.getElementById('board-card1');
+//Player 2
 const cardBoardP2 = document.getElementById('cardp2');
-const cardBoardP2Title    = document.getElementById('namecardp2');
+const cardBoardP2Title = document.getElementById('namecardp2');
 const cardBoardP2Atribute = document.getElementById('atributosp2');
+const boardCardP2 = document.getElementById('board-card2');
 
 
 // UI 
@@ -29,7 +32,7 @@ let liveUI = document.getElementById('menu-live');
 window.onload = init();
 
 function init() {
-    
+
 };
 
 function randomRalph(min, max) {
@@ -38,12 +41,12 @@ function randomRalph(min, max) {
     changeImage(number);
 }
 
-function changeImage(indice) {
+function choiceCard(player) {
     // tabuleirodv[indice].style.backgroundImage = "url(" + imgRalph + ")";
-
-   // setTimeout(function () {
-        // tabuleirodv[number].style.backgroundImage = "url(" + imgRalphInativo + ")"
-    //}, 700);
+    if (player === 'p1')
+        boardCardP1.style.backgroundImage = "url(assets/icons/cardhighgreen.png)"
+    else
+        boardCardP2.style.backgroundImage = "url(assets/icons/cardhighblue.png)"
 };
 
 // CONTADOR DO SCORE
@@ -83,16 +86,16 @@ function playSound(audioName) {
     audio.play();
 }
 
-function selectCard(opcao,player) {
-        
-      if (player === 'p1'){  
-        cardBoardP1.src = "assets/icons/"+cardsImage[opcao];
+function selectCard(opcao, player) {
+
+    if (player === 'p1') {
+        cardBoardP1.src = "assets/icons/" + cardsImage[opcao];
         cardBoardP1Title.innerHTML = cardsName[opcao];
-        cardBoardP1Atribute.innerHTML = cardsAtributes[opcao];  
-      }else{
-        cardBoardP2.src = "assets/icons/"+cardsImage[opcao];
+        cardBoardP1Atribute.innerHTML = cardsAtributes[opcao];
+    } else {
+        cardBoardP2.src = "assets/icons/" + cardsImage[opcao];
         cardBoardP2Title.innerHTML = cardsName[opcao];
-        cardBoardP2Atribute.innerHTML = cardsAtributes[opcao];  
-  
-      }  
+        cardBoardP2Atribute.innerHTML = cardsAtributes[opcao];
+
+    }
 };       
