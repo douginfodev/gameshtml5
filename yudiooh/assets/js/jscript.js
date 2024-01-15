@@ -3,7 +3,10 @@ let number = 0;
 let clicked = false;
 let score = 0;
 let live = 3;
-let timer = 3000;
+let time = 5;
+let temporizador = 1000;
+let contagem;
+let countclick = 0;
 let cardAtualP1;
 let cardAtualP2;
 
@@ -16,13 +19,15 @@ let cardsName = ['', 'Dragon', 'Exodia', 'Magician'];
 let cardsAtributes = ['', 'Pedra', 'Tesoura', 'Papel'];
 let cardsImage = ['', 'dragon.png', 'exodia.png', 'magician.png']
 
+const timeNumber = document.getElementById('time');
+
 //Player 1
 const cardBoardP1 = document.getElementById('cardp1');
 const cardBoardP1Title = document.getElementById('namecardp1');
 const cardBoardP1Atribute = document.getElementById('atributosp1');
 const boardCardP1 = document.getElementById('board-card1');
 const mensagep1 = document.getElementById('card1win');
- 
+
 
 //Player 2
 const cardBoardP2 = document.getElementById('cardp2');
@@ -33,9 +38,9 @@ const mensagep2 = document.getElementById('card2win');
 
 // UI 
 let timeUI = document.getElementById('menu-time');
-let winP1  = document.getElementById('menu-score');
+let winP1 = document.getElementById('menu-score');
 let loseP1 = document.getElementById('menu-live');
-let winP2  = document.getElementById('menu-score');
+let winP2 = document.getElementById('menu-score');
 let loseP2 = document.getElementById('menu-live');
 
 // Start
@@ -44,8 +49,9 @@ window.onload = init();
 function init() {
     cardAtualP1 = 1;
     cardAtualP2 = 2;
-    mensagep1.innerHTML = 'WIN';
-    mensagep2.innerHTML = 'LOSE';
+    mensagep1.innerHTML = '';
+    mensagep2.innerHTML = '';
+    //timeNumber.innerHTML = '';
 };
 
 function randomRalph(min, max) {
@@ -55,35 +61,46 @@ function randomRalph(min, max) {
 }
 
 function choiceCard(player) {
-    // tabuleirodv[indice].style.backgroundImage = "url(" + imgRalph + ")";
+    countclick += 1;
+
     if (player === 'p1')
         boardCardP1.style.backgroundImage = "url(assets/icons/cardhighgreen.png)"
     else
         boardCardP2.style.backgroundImage = "url(assets/icons/cardhighblue.png)"
+
+    if (countclick === 2) {
+        countclick = 0;
+        contagem = setInterval(function () {
+            countTimer();
+        }
+            , temporizador);
+    }
 };
 
 // CONTADOR DO SCORE
-function placar(check,pontos) {
+function placar(check, pontos) {
     if (check === 'win')
         score = (pontos + 1)
-    else    
-       score = (pontos - 1)
+    else
+        score = (pontos - 1)
 
     return score;
 };
 
 // CONTADOR DO LIVES
 function jogar() {
-   
+    console.log('jogar');
+
 };
 
 function countTimer() {
     time -= 1;
+    timeNumber.innerHTML = time;
 
-    if (live >= 0)
-        time.innerHTML = time;
-    else
-        jogar();
+    if (time === 0){
+      clearInterval(contagem);
+      jogar();
+    }  
 };
 
 function gameover() {
