@@ -4,20 +4,21 @@ let clicked = false;
 let score = 0;
 let live = 3;
 let timer = 2000;
-let imgRalph = 'assets/img/ralphativo.png';
-let imgRalphInativo = 'assets/img/ralphinativo.png';
+let cardgreendown = 'assets/img/cardgreendown.png';
+let cardbluedown = 'assets/img/cardbluedown.png';
+
+let cardsName = ['','Dragon','Exodia','Magician'];
+let cardsAtributes = ['','Pedra','Tesoura','Papel'];
+let cardsImage = ['','dragon.png','exodia.png','magician.png']
 
 //DOM
-let tabuleirodv = [];
-tabuleirodv[0] = document.getElementById('dv0');
-tabuleirodv[1] = document.getElementById('dv1');
-tabuleirodv[2] = document.getElementById('dv2');
-tabuleirodv[3] = document.getElementById('dv3');
-tabuleirodv[4] = document.getElementById('dv4');
-tabuleirodv[5] = document.getElementById('dv5');
-tabuleirodv[6] = document.getElementById('dv6');
-tabuleirodv[7] = document.getElementById('dv7');
-tabuleirodv[8] = document.getElementById('dv8');
+const cardBoardP1 = document.getElementById('cardp1');
+const cardBoardP1Title    = document.getElementById('namecardp1');
+const cardBoardP1Atribute = document.getElementById('atributosp1');
+const cardBoardP2 = document.getElementById('cardp2');
+const cardBoardP2Title    = document.getElementById('namecardp2');
+const cardBoardP2Atribute = document.getElementById('atributosp2');
+
 
 // UI 
 let timeUI = document.getElementById('menu-time');
@@ -28,13 +29,7 @@ let liveUI = document.getElementById('menu-live');
 window.onload = init();
 
 function init() {
-    tabuleirodv[0].style.backgroundImage = "url(" + imgRalphInativo + ")";
-    timeUI.innerHTML = '30';
-
-    setInterval(function () {
-        randomRalph(0, 8);
-    }
-        , timer);
+    
 };
 
 function randomRalph(min, max) {
@@ -43,22 +38,12 @@ function randomRalph(min, max) {
     changeImage(number);
 }
 
-function clickDetona(posicaoatual) {
-    let posicaoAtual = posicaoatual;
-
-    if (posicaoAtual === number) {
-        clicked = true;
-        placar(clicked);
-        tabuleirodv[number].style.backgroundImage = "url(" + imgRalphInativo + ")";
-    }
-};
-
 function changeImage(indice) {
-    tabuleirodv[indice].style.backgroundImage = "url(" + imgRalph + ")";
+    // tabuleirodv[indice].style.backgroundImage = "url(" + imgRalph + ")";
 
-    setTimeout(function () {
-        tabuleirodv[number].style.backgroundImage = "url(" + imgRalphInativo + ")"
-    }, 700);
+   // setTimeout(function () {
+        // tabuleirodv[number].style.backgroundImage = "url(" + imgRalphInativo + ")"
+    //}, 700);
 };
 
 // CONTADOR DO SCORE
@@ -98,13 +83,16 @@ function playSound(audioName) {
     audio.play();
 }
 
-function realizarJogada(posicao) {
-    tabuleirodv[posicao].innerHTML = playerTurno(playerAtual);
-    tabuleirodv[posicao].style.color = colorPlayer;
-
-    //Troca o turno / player
-    if (playerAtual === 1)
-        playerAtual = 0
-    else
-        playerAtual = 1;
-};
+function selectCard(opcao,player) {
+        
+      if (player === 'p1'){  
+        cardBoardP1.src = "assets/icons/"+cardsImage[opcao];
+        cardBoardP1Title.innerHTML = cardsName[opcao];
+        cardBoardP1Atribute.innerHTML = cardsAtributes[opcao];  
+      }else{
+        cardBoardP2.src = "assets/icons/"+cardsImage[opcao];
+        cardBoardP2Title.innerHTML = cardsName[opcao];
+        cardBoardP2Atribute.innerHTML = cardsAtributes[opcao];  
+  
+      }  
+};       
