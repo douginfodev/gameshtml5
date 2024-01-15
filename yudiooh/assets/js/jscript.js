@@ -3,7 +3,12 @@ let number = 0;
 let clicked = false;
 let score = 0;
 let live = 3;
-let timer = 2000;
+let timer = 3000;
+let cardAtualP1;
+let cardAtualP2;
+
+
+
 let cardgreendown = 'assets/img/cardgreendown.png';
 let cardbluedown = 'assets/img/cardbluedown.png';
 
@@ -16,23 +21,31 @@ const cardBoardP1 = document.getElementById('cardp1');
 const cardBoardP1Title = document.getElementById('namecardp1');
 const cardBoardP1Atribute = document.getElementById('atributosp1');
 const boardCardP1 = document.getElementById('board-card1');
+const mensagep1 = document.getElementById('card1win');
+ 
+
 //Player 2
 const cardBoardP2 = document.getElementById('cardp2');
 const cardBoardP2Title = document.getElementById('namecardp2');
 const cardBoardP2Atribute = document.getElementById('atributosp2');
 const boardCardP2 = document.getElementById('board-card2');
-
+const mensagep2 = document.getElementById('card2win');
 
 // UI 
 let timeUI = document.getElementById('menu-time');
-let scoreUI = document.getElementById('menu-score');
-let liveUI = document.getElementById('menu-live');
+let winP1  = document.getElementById('menu-score');
+let loseP1 = document.getElementById('menu-live');
+let winP2  = document.getElementById('menu-score');
+let loseP2 = document.getElementById('menu-live');
 
 // Start
 window.onload = init();
 
 function init() {
-
+    cardAtualP1 = 1;
+    cardAtualP2 = 2;
+    mensagep1.innerHTML = 'WIN';
+    mensagep2.innerHTML = 'LOSE';
 };
 
 function randomRalph(min, max) {
@@ -50,21 +63,18 @@ function choiceCard(player) {
 };
 
 // CONTADOR DO SCORE
-function placar(check) {
-    if (check) {
-        score += 1;
-        scoreUI.innerHTML = score;
-    }
+function placar(check,pontos) {
+    if (check === 'win')
+        score = (pontos + 1)
+    else    
+       score = (pontos - 1)
+
+    return score;
 };
 
 // CONTADOR DO LIVES
-function lives() {
-    live -= 1;
-
-    if (live >= 0)
-        liveUI.innerHTML = live
-    else
-        gameover();
+function jogar() {
+   
 };
 
 function countTimer() {
@@ -73,7 +83,7 @@ function countTimer() {
     if (live >= 0)
         time.innerHTML = time;
     else
-        lives();
+        jogar();
 };
 
 function gameover() {

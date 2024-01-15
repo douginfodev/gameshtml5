@@ -89,6 +89,14 @@ aside{
     background-image: url('../img/bck-layout.png');
 }
 
+.timer{
+    width: inherit;
+    padding-top: 10px;
+    height: auto;
+    text-align: center;
+    background-image: url('../img/bck-layout.png');
+}
+
 .centro-footer {
     display: flex;
     width: inherit;
@@ -127,7 +135,17 @@ aside{
 
 .board{
     display: flex;
-    width: 50%;
+    width: 98%;
+    height: auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#board-card1-win,
+#board-card2-win
+{
+    display: flex;
+    width: 50px;
     height: auto;
     justify-content: center;
     align-items: center;
@@ -136,7 +154,7 @@ aside{
 #board-card1,
 #board-card2
 {
-    width: 210px;
+    width: 177px;
     height: 228px;
     cursor: pointer;
     padding: 3px;
