@@ -52,7 +52,7 @@
       <div class="centro">
         <div class="centro-cards">
           <div class="board">
-            <div id="board-card1" onclick="clickDetona(0)">
+            <div id="board-card1" onclick="clickDetona(0)" style="background-image: url('assets/icons/cardhighgreen.png');">
             </div>
 
             <div class="logo-center">
@@ -60,28 +60,64 @@
             </div>
 
             <div id="board-card2" onclick="clickDetona(2)"
-              style="background-image: url('assets/img/ralphinativo.png');">
+              style="background-image: url('assets/icons/cardhighblue.png');">
             </div>
           </div>
         </div>
         <div class="centro-footer">
           <div class="card-info">
             <div class="card-info-descricao">
+              <div class="card-info-descricao-title">
+                <h3 id="namecard">DARK MAGICIAN</h3>
+              </div> 
 
+              <div class="card-info-descricao-card">
+                <img id="card" src="assets/icons/dragon.png" alt=""/>
+              </div>
+
+              <div class="card-info-descricao-option">
+                <h3>ATRIBUTOS</h3>
+                <h4 id="atributos">PAPEL</h4>
+              </div>
             </div>
 
             <div class="card-info-placar">
-
+              <div class="placarp1">
+                <h3 id="p1win">WIN</h3>
+                <h3 id="p1winpontos">0</h3>
+              </div>
+              <div class="placarp1">
+                <h3 id="p1win">LOSE</h3>
+                <h3 id="p1losepontos">0</h3>
+              </div>
             </div>
           </div>
 
           <div class="card-info1">
             <div class="card-info-descricao">
+              <div class="card-info-descricao-title">
+                <h3 id="namecardp2">EXODIA</h3>
+              </div> 
 
+              <div class="card-info-descricao-card">
+                <img id="card" src="assets/icons/exodia.png" alt=""/>
+              </div>
+
+              <div class="card-info-descricao-option">
+                <h3>ATRIBUTOS</h3>
+                <h4 id="atributosp2">TESOURA</h4>
+              </div>
             </div>
 
             <div class="card-info-placar">
-
+              <div class="placarp2">
+                <h3 id="p2win">WIN</h3>
+                <h3 id="p2winpontos">0</h3>
+              </div>
+              <div class="placarp2">
+                <h3 id="p2lose">LOSE</h3>
+                <h3 id="p2losepontos">0</h3>
+              </div>
             </div>
           </div>
         </div>
@@ -111,11 +147,7 @@
       </aside>
     </main>
 
-    <footer>
-      <div class="placarp1">
-        <h3 id="p1win">WIN: 0</h3>
-        <h3 id="p1lose">LOSE: 0</h3>
-      </div>
+    <footer>     
       <div class="socialmedia-logo">
         <a href="https://www.instagram.com/profdomdev/" target="_blank">
           <img src="assets/img/instagram80x80.png" alt="Logotipo do Instagram" />
@@ -138,10 +170,7 @@
           <img src="assets/img/logogit.png" alt="Logo do repositorio GitHub" />
         </a>
       </div>
-      <div class="placarp2">
-        <h3 id="p2win">WIN: 0</h3>
-        <h3 id="p2loose">LOSE: 0</h3>
-      </div>
+      
     </footer>
   </div>
   <script src="assets/js/jscript.js"></script>
