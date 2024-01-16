@@ -6,7 +6,7 @@
 
 body {
     font-size: 30px;
-    background-image: url('../img/fundo.png');
+    background-image: url('../icons/fundo2.png');
     font-weight: 700;
 }
 
@@ -25,6 +25,20 @@ header {
     width: 1240px;
     height: 80px;
     background-image: url('../img/bck-black.png');
+    border-bottom: 2px solid white;
+}
+
+header h1{
+    font-size: 36px;
+}
+
+span{
+    font-size: 14px;
+    line-height: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-left: 10px;
+    height: 80px;
 }
 
 .brand {
@@ -35,6 +49,9 @@ header {
 
 .title {
     display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 20px;
     width: 880px;
     height: 80px;    
 }
@@ -44,6 +61,7 @@ main {
     width: 1240px;
     height: 800px;
     border-radius: 10px;
+    background-image: url('../img/bck-black.png');
 }
 
 aside{
@@ -53,6 +71,7 @@ aside{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    text-transform: uppercase;
 }
 
 .player1,
@@ -78,7 +97,12 @@ aside{
     width: 950px;
     height: 606px;
     justify-content: space-around;
-    background-image: url('../img/bck-buttons.png');
+    background-image: url('../img/bck-black.png');
+}
+
+.centro h1{
+    font-size: 30px;
+    text-transform: uppercase;
 }
 
 .centro-cards {
@@ -86,7 +110,7 @@ aside{
     width: inherit;
     height: 402px;
     justify-content: space-around;
-    background-image: url('../img/bck-layout.png');
+    background-image: url('../img/bck-black.png');
 }
 
 .timer{
@@ -94,7 +118,11 @@ aside{
     padding-top: 10px;
     height: auto;
     text-align: center;
-    background-image: url('../img/bck-layout.png');
+    background-image: url('../img/bck-black.png');
+}
+
+.time h1{
+    background-image: url('../img/bck-black.png');
 }
 
 .centro-footer {
@@ -181,7 +209,7 @@ aside{
     justify-content: space-around;
     width: 100%;
     height: 220px;
-    background-image: url('../img/bck-layout.png');
+    background-image: url('../img/bck-black.png');
 }   
 
 .card-info,
@@ -205,7 +233,7 @@ aside{
     padding: 10px;
     border-radius: 10px 10px 10px 10px;
     margin-bottom: 10px;
-    background-image: url('../../assets/img/bck-layout.png');
+    background-image: url('../../assets/img/bck-black.png');
 }
 
 .card-info-placar{
@@ -214,7 +242,7 @@ aside{
     height: 100px;
     padding: 10px;
     border-radius: 10px 10px 10px 10px;
-    background-image: url('../../assets/img/bck-cards.png');
+    background-image: url('../../assets/img/bck-black.png');
 }
 
 .card-info-descricao-title h3,
@@ -237,12 +265,25 @@ footer {
     align-items: center;
     background-image: url("../img/bck-black.png");
     width: 1240px;
-    height: 80px;
+    height: 100px;
     border-radius: 10px;
+    border-top: 2px solid white;
 }
 
 footer img{
     width: 50px;
+}
+.agradecimento{
+    width: 600px;
+    height: 80px; 
+}
+
+.socialmedia{
+    display: flex;
+    width: 640px;
+    height: auto; 
+    justify-content: space-around;
+    align-items: center;
 }
 
 .placarp1,
