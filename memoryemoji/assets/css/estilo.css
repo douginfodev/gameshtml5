@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 30px;
+    background-image: url('../img/fundo.png');
+    font-weight: 700;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;    
+}
+
+header {
+    display:flex;
+    width: 800px;
+    height: 175px;
+    border: 10px; 
+    background-image: url('../img/bck-black.png');
+}
+
+.brand {
+    width: 200px;
+    height: 60px;
+}
+
+.brand img{
+    width: 190px;
+    height: auto;
+}
+
+.title-game {
+    display: flex;
+    width: 600px;
+    height: 60px;    
+}
+
+
+
+main {
+    width: 800px;
+    height: 800px;
+    border-radius: 10px;
+}
+
+
+#centro {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 800px;
+    height: 800px;
+    justify-content: space-around;
+    background-image: url('../img/bck-buttons.png');
+}
+
+#dv0,
+#dv2,
+#dv3,
+#dv4,
+#dv5,
+#dv6,
+#dv7,
+#dv8,
+#dv1,
+#dv10,
+#dv9,
+#dv11,
+#dv12,
+#dv13,
+#dv14,
+#dv15,
+#dv16 {
+    width: 190px;
+    height: 190px;
+    cursor: pointer;
+    gap: 2px;
+    border-radius: 10px;
+}
+
+#corpo {
+    width: 606px;
+    height: 356px;
+}
+
+footer {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url("../img/bck-black.png");
+    width: 606px;
+    height: 117px;
+    border-radius: 10px;
+    border: 2px solid #1ce09c;
+}

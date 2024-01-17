@@ -1,5 +1,5 @@
 body{
- font-size:30px;
+ font-size: 62.5%;
  color:black;
  background-color: #efefF0;
 }
@@ -42,7 +42,7 @@ body{
 
 #centro{
     float:left;
-    background-image: url("../img/centro.png");
+    /* background-image: url("../img/centro.png"); */
     width: 406px;
     height: 351px;
 }
@@ -54,10 +54,10 @@ body{
     height: 356px;
 }
 
-#dv1,#dv2,#dv3,#dv4,#dv5,#dv6,#dv7,#dv8,#dv9{    
+#casa0,#casa1,#casa2,#casa3,#casa4,#casa5,#casa6,#casa7,#casa8{    
     width: 91px;
     height: 91px;
-    background-color: white;
+    background-image: url('../img/casafundo.png');
     float:left;
     font-size: 90px;
     color: blue;
@@ -65,11 +65,12 @@ body{
     cursor: pointer;
     padding: 5px;
     margin-left: 27px;
-    margin-top: 12px
+    margin-top: 12px;
+    border: 3px solid white;
 }
 
-#dv1:hover,#dv2:hover{
-   background-color: yellow;
+#casa0:hover,#casa1:hover,#casa2:hover,#casa3:hover,#casa4:hover,#casa5:hover,#casa6:hover,#casa7:hover,#casa8:hover{
+   background-image: url('../img/botaoplay.jpg');
 }
 
 #rodape{
