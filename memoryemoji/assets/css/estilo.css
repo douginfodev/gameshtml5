@@ -6,8 +6,22 @@
 
 body {
     font-size: 30px;
-    background-image: url('../img/fundo.png');
+    background-image: url('../img/fundo2.png');
     font-weight: 700;
+}
+
+button{
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 10px;
+    background-image: url('../img/bck-buttons.png');
+    cursor: pointer;
 }
 
 .container {
@@ -23,25 +37,34 @@ body {
 header {
     display:flex;
     width: 800px;
-    height: 175px;
-    border: 10px; 
+    height: 115px;
+    border-bottom: 1px solid white; 
     background-image: url('../img/bck-black.png');
+
 }
 
 .brand {
-    width: 200px;
-    height: 60px;
+    margin-left: 80px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 100px;
 }
 
 .brand img{
-    width: 190px;
+    width: 400px;
     height: auto;
 }
 
 .title-game {
     display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 15px;
     width: 600px;
-    height: 60px;    
+    height: 60px;   
+    padding-top: 30px; 
 }
 
 
@@ -60,7 +83,7 @@ main {
     width: 800px;
     height: 800px;
     justify-content: space-around;
-    background-image: url('../img/bck-buttons.png');
+    background-image: url('../img/bck-black.png');
 }
 
 #dv0,
@@ -78,13 +101,15 @@ main {
 #dv12,
 #dv13,
 #dv14,
-#dv15,
-#dv16 {
+#dv15
+ {
     width: 190px;
     height: 190px;
     cursor: pointer;
     gap: 2px;
     border-radius: 10px;
+    border: 2px solid white;
+    background-image: url('../img/CARDBACK.png');
 }
 
 #corpo {
@@ -97,8 +122,26 @@ footer {
     justify-content: space-around;
     align-items: center;
     background-image: url("../img/bck-black.png");
-    width: 606px;
+    width: 800px;
     height: 117px;
     border-radius: 10px;
     border: 2px solid #1ce09c;
+}
+
+.button-game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 117px; 
+}
+
+.redesocial{
+    width: 600px;
+    height: 117px; 
+}
+
+.socialmedia-logo img{
+   width: 70%;
+   height: auto;
 }
