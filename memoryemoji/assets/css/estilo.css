@@ -82,6 +82,9 @@ main {
     margin: 0 auto;
     width: 800px;
     height: 800px;
+    padding-top: 5px;
+    transform-style: preserve-3d;
+    perspective: 500px;
     justify-content: space-around;
     background-image: url('../img/bck-black.png');
 }
@@ -108,8 +111,23 @@ main {
     cursor: pointer;
     gap: 2px;
     border-radius: 10px;
-    border: 2px solid white;
-    background-image: url('../img/CARDBACK.png');
+    background-image: url('../img/CARDBACK.png'); 
+    text-align: center;
+    padding: 40px;
+    font-size: 5rem;
+    /* transform: rotateY(180deg); */
+   /* transition: 0.25s; */
+}
+
+#dv0::after,
+#dv2::after,
+#dv3::after,
+#dv4::after,
+#dv5::after,
+#dv6::after{
+    content: "";
+    inset: 0;
+    /* background-image: url('../img/cardfront.png');; */
 }
 
 #corpo {

@@ -1,110 +1,84 @@
 // Variables
 let number = 0;
-let clicked = false;
+let indice = 0;
 let score = 0;
-let live = 3;
-let timer = 2000;
-let imgRalph = 'assets/img/ralphativo.png';
-let imgRalphInativo = 'assets/img/ralphinativo.png';
+
+const emojis = [
+    "🐱",
+    "🐱",
+    "🦝",
+    "🦝",
+    "🦊",
+    "🦊",
+    "🐶",
+    "🐶",
+    "🐵",
+    "🐵",
+    "🦁",
+    "🦁",
+    "🐯",
+    "🐯",
+    "🐮",
+    "🐮",
+];
 
 //DOM
-let tabuleirodv = [];
-tabuleirodv[0] = document.getElementById('dv0');
-tabuleirodv[1] = document.getElementById('dv1');
-tabuleirodv[2] = document.getElementById('dv2');
-tabuleirodv[3] = document.getElementById('dv3');
-tabuleirodv[4] = document.getElementById('dv4');
-tabuleirodv[5] = document.getElementById('dv5');
-tabuleirodv[6] = document.getElementById('dv6');
-tabuleirodv[7] = document.getElementById('dv7');
-tabuleirodv[8] = document.getElementById('dv8');
-
-// UI 
-let timeUI = document.getElementById('menu-time');
-let scoreUI = document.getElementById('menu-score');
-let liveUI = document.getElementById('menu-live');
+let cards = [];
+let cardSort = [];
+let selectCard = [];
+let divName;
 
 // Start
 window.onload = init();
 
 function init() {
-    tabuleirodv[0].style.backgroundImage = "url(" + imgRalphInativo + ")";
-    timeUI.innerHTML = '30';
+    randomMemory();
 
-    setInterval(function () {
-        randomRalph(0, 8);
+    for (number = 0; number <= 15; number++) {
+        divName = 'dv' + number.toString();
+        cards[number] = document.getElementById(divName);
     }
-        , timer);
 };
 
-function randomRalph(min, max) {
-    number = Math.floor(Math.random() * (max - min + 1)) + min;
-    clicked = false;
-    changeImage(number);
+function randomMemory() {
+    cardSort = emojis.sort(() => (Math.random() > 0.5 ? 2 : -1));
 }
 
-function clickDetona(posicaoatual) {
-    let posicaoAtual = posicaoatual;
+function clickCard(posicaoatual) {
+    selectCard[indice] = posicaoatual;
+    indice += 1;
+    cards[posicaoatual].innerHTML = cardSort[posicaoatual];
 
-    if (posicaoAtual === number) {
-        clicked = true;
-        placar(clicked);
-        tabuleirodv[number].style.backgroundImage = "url(" + imgRalphInativo + ")";
+    if ((cardSort[selectCard[0]] === cardSort[selectCard[1]]) && (indice == 2)) {
+        indice = 0;
+        changeImage(posicaoatual, true);
+    } else {
+
+        if (indice == 2)
+            changeImage(posicaoatual, true)
+        else
+            changeImage(posicaoatual, false);
     }
 };
 
-function changeImage(indice) {
-    tabuleirodv[indice].style.backgroundImage = "url(" + imgRalph + ")";
+function changeImage(ind, check) {
+    cards[ind].style.backgroundImage = "url(assets/img/cardfront.png)";
 
-    setTimeout(function () {
-        tabuleirodv[number].style.backgroundImage = "url(" + imgRalphInativo + ")"
-    }, 700);
+    if ((check) && (indice == 2)) {
+        setTimeout(function () {
+            cards[selectCard[0]].style.backgroundImage = "url(assets/img/CARDBACK.png)"
+            cards[selectCard[1]].style.backgroundImage = "url(assets/img/CARDBACK.png)"
+            cards[selectCard[0]].innerHTML = '';
+            cards[selectCard[1]].innerHTML = '';
+            cards[selectCard[0]].style.border = 'none';
+            cards[selectCard[1]].style.border = 'none';
+
+        }, 700);
+        indice = 0;
+    }
 };
 
 // CONTADOR DO SCORE
-function placar(check) {
-    if (check) {
-        score += 1;
-        scoreUI.innerHTML = score;
-    }
-};
-
-// CONTADOR DO LIVES
-function lives() {
-    live -= 1;
-
-    if (live >= 0)
-        liveUI.innerHTML = live
-    else
-        gameover();
-};
-
-function countTimer() {
-    time -= 1;
-
-    if (live >= 0)
-        time.innerHTML = time;
-    else
-        lives();
-};
-
-function gameover() {
-    console.log('Fim do jogo');
-}
-
-function playSound(audioName) {
-    let audio = new Audio(`./assets/audios/${audioName}.m4a`);
-    audio.volume = 0.2;
-    audio.play();
-}
-
-function realizarJogada(posicao) {
-    tabuleirodv[posicao].innerHTML = playerTurno(playerAtual);
-    tabuleirodv[posicao].style.color = colorPlayer;
-
-    //Troca o turno / player
-    if (playerAtual === 1)
-        playerAtual = 0
-    else
-        playerAtual = 1;
+function reset() {
+    location.reload();
 };
