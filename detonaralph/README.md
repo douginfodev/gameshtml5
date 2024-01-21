@@ -12,7 +12,7 @@ Tecnologias: Html 5, CSS e JavaScript
 # Tela do jogo
 
 <div>
-<img src="assets/img/detonaralphlogo.png" alt="">
+<img src="assets/img/detonaralphscreen.png.png" alt="">
 </div>
 
 # DETONA RALPH - THE GAME
