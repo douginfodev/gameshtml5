@@ -5,7 +5,7 @@ Projeto desenvolvido durante os desafios do bootcamp Desenvolvimento de Jogos da
 
 # Informações
 Nome : Emojy Memory Game
-Gênero: Casual
+Gênero: raciocínio-lógico
 Plataforma: Web
 Tecnologias: Html 5, CSS e JavaScript
 
@@ -18,7 +18,7 @@ Tecnologias: Html 5, CSS e JavaScript
 # EMOGI MEMORY GAME
 
 # 1.1 - CONCEITO
-Descubra em que casa o ralph vai aparecer e tente, em quando ele aparecer, tente clicar nele para detoná-lo.
+Tradicional jogo da memória com cartas.
 
 # 1.2 - GÊNERO
 É um jogo de raciocínio lógico.
